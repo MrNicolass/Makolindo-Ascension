@@ -2,13 +2,9 @@
     <img src="https://files.engaged.com.br/5db0810e95b4f900077e887e/account/5db0810e95b4f900077e887e/xMCS8NFKTMqwhefy8WLd_catolica-horizontal.png" width="400" alt="Logo Católica">
 </p>
 
-<h1 align="center">
-    Makolindo Ascension - A Roguelite Game
-    <a href="https://www.yoyogames.com/" target="_blank">
-        <img src="https://www.moosoft.com/wp-content/uploads/2022/11/gamemaker-studio-98765-1.png" alt="GML" width="20" />
-    </a>
-</h1>
+<h1 align="center">Makolindo Ascension</h1>
 
+<p align="center">Uma aventura pela redenção e a honra!</p>
 <table align="center">
     <tr>
         <td><strong>Nome do Estudante</strong></td>
@@ -20,19 +16,37 @@
     </tr>
     <tr>
         <td><strong>Data de Entrega</strong></td>
-        <td>xx/06/2026</td>
+        <td>05/06/2026</td>
     </tr>
 </table>
 
 # Resumo
 
+<!--
 Breve descrição do conteúdo do documento, incluindo o propósito do projeto e os principais pontos de discussão.
+-->
+
+Neste documento, será descorrido o processo de desenvolvimento de um jogo ao estilo _roguelite_, que busca contar a história do personagem místico fictício chamado "Makolindo" e sua busca pela ascensão pós queda, ambientado em um mundo mágico médio. O projeto busca apresentar os aprendizados, desafios, erros e acertos envolvidos ao longo do processo, assim como uma visão do desenvolvimento de jogos dentro do mercado brasileiro e suas perspectivas para o futuro.
 
 ## 1. Introdução
 
+<!--
 - **Contexto**: Breve descrição do contexto que envolve o projeto.
 - **Justificativa**: Explicação da relevância do projeto para o campo da engenharia de software.
 - **Objetivos**: Descrição do objetivo principal do projeto e de quaisquer objetivos secundários.
+-->
+
+No cenário globalizado atual, os jogos digitais transcenderam o status de nicho, alcançando aproximadamente 3,6 bilhões de jogadores em todo o mundo e gerando um faturamento estimado de US$ 188,8 bilhões até setembro de 2025 (NEWZOO, 2025). Makolindo Ascension tem como seu ponto principal, apresentar que por meio do desenvolvimento de um jogo digital, mesmo em um mercado emergente como o brasileiro, é possível adquirir e unificar conhecimentos técnicos, profissionais e artísticos.
+
+A composição do mesmo, será feita por um conjunto de "sistemas base" integrados, baseados em jogos de sucesso do mesmo seguimento, como [*Hero Siege*](https://store.steampowered.com/app/269210/Hero_Siege/), [*Soul Knight*](https://play.google.com/store/apps/details?id=com.ChillyRoom.DungeonShooter&hl=pt_BR) e [*Undermine*](https://store.steampowered.com/agecheck/app/656350/). Haverão sistemas de geração de níveis randomizadsos, monetização _in-game_, combate (com inimigos e chefões), itens e poderes especiais, que serão destrinchados no decorrer deste documento.
+
+O jogo será desenvolvido por meio da plataforma [GameMaker](https://gamemaker.io/pt-BR), com o estilo visual em [_pixel art_](https://en.wikipedia.org/wiki/Pixel_art) simples, voltado para computadores _desktop_ Windows e MacOS, com uma dificuldade ligeiramente mais elevada que seus pares. O intuito é fazer com que o jogador fique envolvido com a história, o fazendo simpatizar com Makolindo, suas dificuldades e empecilhos empostos por seus "inimigos" ao longo do trajeto.
+
+Antes de seguir com a explanação do projeto, será introduzido os conceitos necessários para o entendimento do gênero do jogo, estilo artístico e as obras de referência.
+
+### 1.1. Gênero _Roguelite_
+
+###  1.2. Estilo Artístico - _Pixel Art_
 
 ## 2. Descrição do Projeto
 
@@ -94,7 +108,19 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 
 ## 5. Referências
 
-Listagem de todas as fontes de pesquisa, frameworks, bibliotecas e ferramentas que serão utilizadas.
+- OPEN GAME ART. [S. l.: s. n.], [s. d.]. Disponível em: [https://opengameart.org/](https://opengameart.org/). Acesso em: 15 set. 2025.
+- BEEPBOX. [S. l.: s. n.], [s. d.]. Disponível em: [https://www.beepbox.co/](https://www.beepbox.co/). Acesso em: 15 set. 2025.
+- ROGuelike vs. Roguelite: você sabe quais são as diferenças?. **TecMundo**, 28 maio 2022. Disponível em: [https://www.tecmundo.com.br/voxel/237827-roguelike-vs-roguelite-voce-sabe-diferencas.htm](https://www.tecmundo.com.br/voxel/237827-roguelike-vs-roguelite-voce-sabe-diferencas.htm). Acesso em: 15 set. 2025.
+- BERLIN Interpretation. In: ROGUEBASIN. [S. l.], 2021. Disponível em: [https://www.roguebasin.com/index.php/Berlin_Interpretation](https://www.roguebasin.com/index.php/Berlin_Interpretation). Acesso em: 15 set. 2025.
+- CAMPOS, Amanda Rodrigues. **O GÊNERO ROGUELIKE**: UMA ANÁLISE DE HADES. 2023. Trabalho de Conclusão de Curso (Graduação em Design de Animação) - Centro Universitário Senac, São Paulo, 2023. Disponível em: [http://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/15548/3/20232S_Amanda%20Campos_OD1833.pdf](http://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/15548/3/20232S_Amanda%20Campos_OD1833.pdf). Acesso em: 15 set. 2025.
+- MARTIN, Geoffrey. Roguelike vs. Roguelite: What's The Difference?. **TheGamer**, 23 ago. 2023. Disponível em: [https://www.thegamer.com/roguelike-vs-roguelite-what-the-difference/](https://www.thegamer.com/roguelike-vs-roguelite-what-the-difference/). Acesso em: 15 set. 2025.
+- MAKOLINDO MONSTRO. **A Jornada de um DEPRESSIVO a um MONSTRO (INSPIRADOR)** - Motivação. [S. l.]: YouTube, 28 jan. 2023. Disponível em: [https://www.youtube.com/watch?v=PZUaRZJJNhg](https://www.youtube.com/watch?v=PZUaRZJJNhg). Acesso em: 15 set. 2025.
+- MARCOS GAMEDEV. **PARE de usar a GODOT do JEITO ERRADO!**. [S. l.]: YouTube, 24 mar. 2024. Disponível em: [https://www.youtube.com/watch?v=xV6guE1Khuk](https://www.youtube.com/watch?v=xV6guE1Khuk). Acesso em: 15 set. 2025.
+- MAKOLINDO MONSTRO. [S. l.]: YouTube, [s. d.]. Canal. Disponível em: [https://www.youtube.com/@MakolindoMonstro/videos](https://www.youtube.com/@MakolindoMonstro/videos). Acesso em: 15 set. 2025.
+- GAME MAKER'S TOOLKIT. [S. l.]: YouTube, [s. d.]. Canal. Disponível em: [https://www.youtube.com/@GMTK/videos](https://www.youtube.com/@GMTK/videos). Acesso em: 15 set. 2025.
+- MARCOS GAMEDEV. **Como foi criar o meu próprio Motor de Jogo?**. [S. l.]: YouTube, 21 out. 2023. Disponível em: [https://www.youtube.com/watch?v=opBd-Oa6wMk](https://www.youtube.com/watch?v=opBd-Oa6wMk). Acesso em: 15 set. 2025.
+- MGYS - MAKE GAME YOURSELF. [S. l.: s. n.], [s. d.]. Planilha Google. Disponível em: [https://docs.google.com/spreadsheets/d/1Mqcqh9G20bH4nwyVIQn3OIXHdL8gzgyztdC6b8exiQM/edit?gid=88563757#gid=88563757](https://docs.google.com/spreadsheets/d/1Mqcqh9G20bH4nwyVIQn3OIXHdL8gzgyztdC6b8exiQM/edit?gid=88563757#gid=88563757). Acesso em: 15 set. 2025.
+- NEWZOO. **Newzoo Global Games Market Report 2025**. [S. l.]: Newzoo, 2025. Disponível em: [https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025](https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025). Acesso em: 15 set. 2025.
 
 ## 6. Apêndices (Opcionais)
 
