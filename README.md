@@ -44,9 +44,39 @@ O jogo será desenvolvido por meio da plataforma [GameMaker](https://gamemaker.i
 
 Antes de seguir com a explanação do projeto, será introduzido os conceitos necessários para o entendimento do gênero do jogo, estilo artístico e as obras de referência.
 
-### 1.1. Gênero _Roguelite_
+### 1.1. Origem e significado do gênero _roguelite_
 
-###  1.2. Estilo Artístico - _Pixel Art_
+Para entendermos o significado de _roguelite_, primeiro veremos rapidamente o significado do termo _roguelike_, seu predecessor. O termo "_roguelite_" surgiu por voltade 1993 nos grupos de notícias da Usenet[[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3) (plataforma "pré web" de comunicação por texto, com fóruns e notícias), sendo citado pela primeira ver por Andrew Solovay, em uma discussão sobre a criação de um novo fórum específico para discussões sobre jogos como _Hack_, _Moria_ e _Rogue_; foi nesta discussão onde definiu-se que o subfórum se chamaria "rec.games.roguelike.*", pois entre todos os jogos, _Rogue_ era considerado o mais antigo entre eles.
+
+![Exemplo de Roguelite](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1443430/ss_8133cd666690fc773913cc0d1eb93b7e8bfc1ae3.1920x1080.jpg?t=1651574702)
+<p align="center"><em>Figura 1. Imagem de uma das fases do game <a href="https://store.steampowered.com/app/1443430/Rogue/?l=portuguese">Rogue</a>.</em></p>
+
+A grande maioria dos _roguelikes_ baseava-se em conceitos de jogos de interpretação de papéis (também conhecidos como RPG's - _Role-play gaming_) como _Dungeon & Dragons_, onde o jogador tem o controle sobre um personagem que pode ser personalizado, escolhendo uma classe, raça e gênero, assim como podendo também ajustar alguns pontos de atributos e habilidades. Porém com o passar dos anos, inúmeros jogos surgiram adotando a nomenclatura de _roguelike_, mas com características distintas aos seus predecessores.
+
+Então em 2008, foi realizado em Berlim, a primeira conferência Internacional de Desenvolvimento de _Roguelike_, onde jogadores e desenvolvedores estabeleceram uma definição para _roguelikes_, conhecida como "Interpretação de Berlim". Essa interpretação definiu um conjunto de fatores de alto e baixo valor, baseando-se em cinco jogos _roguelike_ canônicos (_ADOM_, _Angband_, _Linley's Dungeon Crawl_, _NetHack_ e _Rogue_), para poder conseguir determinar "o quão _roguelike_ é um jogo". Os tópicos foram definidos como:
+
+- Fatores principais (alto valor):
+    - Geração aleatória – os mapas e itens mudam a cada jogo;
+    - Morte permanente – morreu, começa tudo de novo;
+    - Baseado em turnos – o jogo só anda quando o jogador age;
+    - Movimento em grade – o mundo é dividido em blocos (tiles);
+    - Sem modos separados – todas as ações (andar, lutar, usar item) seguem o mesmo fluxo;
+    - Alta complexidade – muitas opções e estratégias possíveis;
+    - Gerenciamento de recursos – o jogador precisa economizar itens, vida, comida etc;
+    - Exploração e descoberta – o jogo incentiva explorar e aprender o que cada coisa faz;
+- Fatores secundários (baixo valor):
+    - Controlar apenas um personagem;
+    - Inimigos seguem as mesmas regras do jogador;
+    - Combate tático e desafiador;
+    - Visual simples ou ASCII (como letras e símbolos);
+    - Mapas tipo masmorra, com salas e corredores;
+    - Números e estatísticas visíveis (vida, força, dano etc.).
+
+Esses são considerados até hoje, os pontos base para a criação de um "_roguelike_ puro sangue", isso é claro, contendo algumas alterações com base na atualiade.
+
+### 1.2. Origem e significado do gênero _roguelite_
+
+### 1.3. Definição sobre o estilo artístico _pixel art_
 
 ## 2. Descrição do Projeto
 
@@ -108,11 +138,15 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 
 ## 5. Referências
 
+1. <a id="ref-1">WIKIPÉDIA.</a> *Roguelike*. Wikipédia, a enciclopédia livre, 2025. Disponível em: [https://pt.wikipedia.org/wiki/Roguelike](https://pt.wikipedia.org/wiki/Roguelike). Acesso em: 07 out. 2025.
+2. <a id="ref-2">ZAPATA,</a> Santiago. *On the Historical Origin of the “Roguelike” Term*. Slashie’s Gamedev Adventures, v. 1.2.1, 13 nov. 2017. Disponível em: [https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/](https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/). Acesso em: 07 out. 2025.
+3. <a id="ref-3">GROUPS GOOGLE.</a> RFD: rec.games.dungeon.* hierarchy. Google Groups, 1993. Disponível em: [https://groups.google.com/g/news.groups/c/CdWOd-M6g-w/m/cgNn2b9uU2sJ](https://groups.google.com/g/news.groups/c/CdWOd-M6g-w/m/cgNn2b9uU2sJ). Acesso em: 07 out. 2025.
+
 - OPEN GAME ART. [S. l.: s. n.], [s. d.]. Disponível em: [https://opengameart.org/](https://opengameart.org/). Acesso em: 15 set. 2025.
 - BEEPBOX. [S. l.: s. n.], [s. d.]. Disponível em: [https://www.beepbox.co/](https://www.beepbox.co/). Acesso em: 15 set. 2025.
 - ROGuelike vs. Roguelite: você sabe quais são as diferenças?. **TecMundo**, 28 maio 2022. Disponível em: [https://www.tecmundo.com.br/voxel/237827-roguelike-vs-roguelite-voce-sabe-diferencas.htm](https://www.tecmundo.com.br/voxel/237827-roguelike-vs-roguelite-voce-sabe-diferencas.htm). Acesso em: 15 set. 2025.
 - BERLIN Interpretation. In: ROGUEBASIN. [S. l.], 2021. Disponível em: [https://www.roguebasin.com/index.php/Berlin_Interpretation](https://www.roguebasin.com/index.php/Berlin_Interpretation). Acesso em: 15 set. 2025.
-- CAMPOS, Amanda Rodrigues. **O GÊNERO ROGUELIKE**: UMA ANÁLISE DE HADES. 2023. Trabalho de Conclusão de Curso (Graduação em Design de Animação) - Centro Universitário Senac, São Paulo, 2023. Disponível em: [http://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/15548/3/20232S_Amanda%20Campos_OD1833.pdf](http://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/15548/3/20232S_Amanda%20Campos_OD1833.pdf). Acesso em: 15 set. 2025.
+- CAMPOS, Amanda Rodrigues. **Zombieland: Desenvolvimento de um jogo de gênero Roguelite** 2023. Trabalho de Conclusão de Curso (Graduação em Tecnologia em Jogos Digitais) - Faculdade de Tecnologia de Ameriacana (Fatec), São Paulo, 2023. Disponível em: [http://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/15548/3/20232S_Amanda%20Campos_OD1833.pdf](http://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/15548/3/20232S_Amanda%20Campos_OD1833.pdf). Acesso em: 15 set. 2025.
 - MARTIN, Geoffrey. Roguelike vs. Roguelite: What's The Difference?. **TheGamer**, 23 ago. 2023. Disponível em: [https://www.thegamer.com/roguelike-vs-roguelite-what-the-difference/](https://www.thegamer.com/roguelike-vs-roguelite-what-the-difference/). Acesso em: 15 set. 2025.
 - MAKOLINDO MONSTRO. **A Jornada de um DEPRESSIVO a um MONSTRO (INSPIRADOR)** - Motivação. [S. l.]: YouTube, 28 jan. 2023. Disponível em: [https://www.youtube.com/watch?v=PZUaRZJJNhg](https://www.youtube.com/watch?v=PZUaRZJJNhg). Acesso em: 15 set. 2025.
 - MARCOS GAMEDEV. **PARE de usar a GODOT do JEITO ERRADO!**. [S. l.]: YouTube, 24 mar. 2024. Disponível em: [https://www.youtube.com/watch?v=xV6guE1Khuk](https://www.youtube.com/watch?v=xV6guE1Khuk). Acesso em: 15 set. 2025.
@@ -121,6 +155,7 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 - MARCOS GAMEDEV. **Como foi criar o meu próprio Motor de Jogo?**. [S. l.]: YouTube, 21 out. 2023. Disponível em: [https://www.youtube.com/watch?v=opBd-Oa6wMk](https://www.youtube.com/watch?v=opBd-Oa6wMk). Acesso em: 15 set. 2025.
 - MGYS - MAKE GAME YOURSELF. [S. l.: s. n.], [s. d.]. Planilha Google. Disponível em: [https://docs.google.com/spreadsheets/d/1Mqcqh9G20bH4nwyVIQn3OIXHdL8gzgyztdC6b8exiQM/edit?gid=88563757#gid=88563757](https://docs.google.com/spreadsheets/d/1Mqcqh9G20bH4nwyVIQn3OIXHdL8gzgyztdC6b8exiQM/edit?gid=88563757#gid=88563757). Acesso em: 15 set. 2025.
 - NEWZOO. **Newzoo Global Games Market Report 2025**. [S. l.]: Newzoo, 2025. Disponível em: [https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025](https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025). Acesso em: 15 set. 2025.
+
 
 ## 6. Apêndices (Opcionais)
 
