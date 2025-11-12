@@ -22,38 +22,28 @@
 
 # Resumo
 
-<!--
-Breve descrição do conteúdo do documento, incluindo o propósito do projeto e os principais pontos de discussão.
--->
-
 Neste documento, será descorrido o processo de desenvolvimento de um jogo ao estilo _roguelite_, que busca contar a história do personagem místico fictício chamado "Makolindo" e sua busca pela ascensão pós queda, ambientado em um mundo mágico médio. O projeto busca apresentar os aprendizados, desafios, erros e acertos envolvidos ao longo do processo, assim como uma visão do desenvolvimento de jogos dentro do mercado brasileiro e suas perspectivas para o futuro.
 
 ## 1. Introdução
-
-<!--
-- **Contexto**: Breve descrição do contexto que envolve o projeto.
-- **Justificativa**: Explicação da relevância do projeto para o campo da engenharia de software.
-- **Objetivos**: Descrição do objetivo principal do projeto e de quaisquer objetivos secundários.
--->
 
 No cenário globalizado atual, os jogos digitais transcenderam o status de nicho, alcançando aproximadamente 3,6 bilhões de jogadores em todo o mundo e gerando um faturamento estimado de US$ 188,8 bilhões até setembro de 2025 (NEWZOO, 2025). Makolindo Ascension tem como seu ponto principal, apresentar que por meio do desenvolvimento de um jogo digital, mesmo em um mercado emergente como o brasileiro, é possível adquirir e unificar conhecimentos técnicos, profissionais e artísticos.
 
 A composição do mesmo, será feita por um conjunto de "sistemas base" integrados, baseados em jogos de sucesso do mesmo seguimento, como [*Hero Siege*](https://store.steampowered.com/app/269210/Hero_Siege/), [*Soul Knight*](https://play.google.com/store/apps/details?id=com.ChillyRoom.DungeonShooter&hl=pt_BR) e [*Undermine*](https://store.steampowered.com/agecheck/app/656350/). Haverão sistemas de geração de níveis randomizadsos, monetização _in-game_, combate (com inimigos e chefões), itens e poderes especiais, que serão destrinchados no decorrer deste documento.
 
-O jogo será desenvolvido por meio da plataforma [GameMaker](https://gamemaker.io/pt-BR), com o estilo visual em [_pixel art_](https://en.wikipedia.org/wiki/Pixel_art) simples, voltado para computadores _desktop_ Windows e MacOS, com uma dificuldade ligeiramente mais elevada que seus pares. O intuito é fazer com que o jogador fique envolvido com a história, o fazendo simpatizar com Makolindo, suas dificuldades e empecilhos empostos por seus "inimigos" ao longo do trajeto.
+O jogo será desenvolvido por meio da plataforma [_GameMaker_](https://gamemaker.io/pt-BR), com o estilo visual em [_pixel art_](https://en.wikipedia.org/wiki/Pixel_art) simples, voltado para computadores _desktop_ Windows e MacOS, com uma dificuldade ligeiramente mais elevada que seus pares. O intuito é fazer com que o jogador fique envolvido com a história, o fazendo simpatizar com Makolindo, suas dificuldades e empecilhos empostos por seus "inimigos" ao longo do trajeto.
 
 Antes de seguir com a explanação do projeto, será introduzido os conceitos necessários para o entendimento do gênero do jogo, estilo artístico e as obras de referência.
 
-### 1.1. Origem e significado do gênero _roguelite_
+### 1.1. Origem e significado do gênero _roguelike_
 
-Para entendermos o significado de _roguelite_, primeiro veremos rapidamente o significado do termo _roguelike_, seu predecessor. O termo "_roguelite_" surgiu por voltade 1993 nos grupos de notícias da Usenet[[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3) (plataforma "pré web" de comunicação por texto, com fóruns e notícias), sendo citado pela primeira ver por Andrew Solovay, em uma discussão sobre a criação de um novo fórum específico para discussões sobre jogos como _Hack_, _Moria_ e _Rogue_; foi nesta discussão onde definiu-se que o subfórum se chamaria "rec.games.roguelike.*", pois entre todos os jogos, _Rogue_ era considerado o mais antigo entre eles.
+Para entendermos o significado de _roguelite_, primeiro veremos rapidamente o significado do termo _roguelike_, seu predecessor. O termo "_roguelite_" surgiu por voltade 1993 nos grupos de notícias da Usenet<sup>[[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3)</sup> (plataforma "pré web" de comunicação por texto, com fóruns e notícias), sendo citado pela primeira ver por Andrew Solovay, em uma discussão sobre a criação de um novo fórum específico para discussões sobre jogos como [_Hack_](https://www.nethack.org/), [_Moria_](https://umoria.org/) e [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/). Foi nesta discussão onde definiu-se que o subfórum se chamaria "rec.games.roguelike.*", pois entre todos os jogos, [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/) era considerado o mais antigo entre eles.
 
 ![Exemplo de Roguelite](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1443430/ss_8133cd666690fc773913cc0d1eb93b7e8bfc1ae3.1920x1080.jpg?t=1651574702)
 <p align="center"><em>Figura 1. Imagem de uma das fases do game <a href="https://store.steampowered.com/app/1443430/Rogue/?l=portuguese">Rogue</a>.</em></p>
 
 A grande maioria dos _roguelikes_ baseava-se em conceitos de jogos de interpretação de papéis (também conhecidos como RPG's - _Role-play gaming_) como _Dungeon & Dragons_, onde o jogador tem o controle sobre um personagem que pode ser personalizado, escolhendo uma classe, raça e gênero, assim como podendo também ajustar alguns pontos de atributos e habilidades. Porém com o passar dos anos, inúmeros jogos surgiram adotando a nomenclatura de _roguelike_, mas com características distintas aos seus predecessores.
 
-Então em 2008, foi realizado em Berlim, a primeira conferência Internacional de Desenvolvimento de _Roguelike_, onde jogadores e desenvolvedores estabeleceram uma definição para _roguelikes_, conhecida como "Interpretação de Berlim". Essa interpretação definiu um conjunto de fatores de alto e baixo valor, baseando-se em cinco jogos _roguelike_ canônicos (_ADOM_, _Angband_, _Linley's Dungeon Crawl_, _NetHack_ e _Rogue_), para poder conseguir determinar "o quão _roguelike_ é um jogo". Os tópicos foram definidos como:
+Então em 2008, foi realizado em Berlim, a primeira conferência Internacional de Desenvolvimento de _Roguelike_, onde jogadores e desenvolvedores estabeleceram uma definição para _roguelikes_, conhecida como "Interpretação de Berlim". Essa interpretação definiu um conjunto de fatores de alto e baixo valor, baseando-se em cinco jogos _roguelike_ canônicos (_ADOM_, _Angband_, _Linley's Dungeon Crawl_, _NetHack_ e [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/)), para poder conseguir determinar "o quão _roguelike_ é um jogo". Os tópicos foram definidos como:
 
 - Fatores principais (alto valor):
     - Geração aleatória – os mapas e itens mudam a cada jogo;
@@ -76,7 +66,20 @@ Esses são considerados até hoje, os pontos base para a criação de um "_rogue
 
 ### 1.2. Origem e significado do gênero _roguelite_
 
+Com a popularização dos _roguelikes_ dentro das comunidades e fóruns online de discussões sobre o gênero<sup>[[4]](#ref-4)</sup>, inúmeros desenvolvedores independentes começaram a desenvolver suas próprias ideias, adicionando novas funcionalidades e conceitos aos jogos. Coincidentemente, no ano de 2008 o qual foi criado a Interpretação de Berlim, houve o lançamento do jogo [_Spelunky_](https://spelunkyworld.com/original.html) (2008), que frequentemente é citado como o primeiro _roguelite_, onde trazia em sua _gameplay_, diversos elementos de um _roguelike_, mas, sem o fator de "morte permanente completa".
+
+Todos os _roguelikes_ que vieram a seguir começaram a implementar algum tipo de progressão permanente, seja com a liberação de atalhos conforme o avanço entre níveis/fases, o acúmulo de algum tipo de moeda, itens, _upgrades_ e etc. Essa "meta-progressão" é a chave central para diferenciação entre ambos gêneros, também podendo afirmar, que os _roguelikes_ viriam ironicamente a ignorar principalmente, os "fatores de alto valor" definidos pela Interpretação de Berlim.
+
+Embora [_Spelunky_](https://spelunkyworld.com/original.html) (2008) e [_The Binding of Isaac_](https://store.steampowered.com/app/113200/The_Binding_of_Isaac/) (2011) sejam considerados os primeiros _roguelites_, até então, a comunidade ainda não havia definido um termo exato para o gênero, frequentemente os chamando de "_roguelike-like_"<sup>[[5]](#ref-5)</sup>. Foi apenas em 2013, com o lançamento do jogo [_Rogue Legacy_](https://store.steampowered.com/app/241600/Rogue_Legacy/) (2013) que o termo foi cunhado, onde os desenvolvedores deixaram claro na descrição do jogo na loja da [_Steam_](https://store.steampowered.com/)<sup>[[6]](#ref-6)</sup>, que embora o seu jogo tivesse elementos de [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/) (geração processual, morte permanente do personagem), o mesmo era para ser "mais leve" - _lite_.
+
 ### 1.3. Definição sobre o estilo artístico _pixel art_
+
+A origem do estilo _pixel art_ denota de jogos clássicos como [_Space Invaders_](https://en.wikipedia.org/wiki/Space_Invaders) (1978) e [_Pac-Man_](https://en.wikipedia.org/wiki/Pac-Man) (1980), assim como de videogames da mesma época, onde toda arte visual era focada em poucos grupos de blocos 8-bit. Entretanto, o surgimento do termo "_pixel art_" foi dado em 1982 em uma carta de diário publicada por [Adele Goldberg](https://en.wikipedia.org/wiki/Adele_Goldberg_(computer_scientist)) e Robert Flegal, do centro de pesquisa da Xerox em Palo Alto<sup>[[7]](#ref-7)</sup>:
+
+![Artigo "Pixel Art" de Adele Goldberg e Robert Flegak](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgB4kzQatlgP_W2eEFmac_LPfnt4D3-_QVVoof6ECNOhIa3uckh16-KyBSdZqslL9lNFO8QK95lwUim1R7PQhpr8_aIaOdDnPwu-oA3BkzezD6W3-V94OCfyYGzFgt7Q-ptfDNhIJ3aDDYR/s400/image004.gif)
+<p align="center"><em>Figura 2. Pequeno trecho da carta públicada sobre "pixel art".</em></p>
+
+Na carta, em resumo, era apresentado ao público da época (1982) que "pixel art" era quase todo tipo de representação visual criada/apresentada por um computador (como no exemplo acima, onde um _scan_ de uma foto foi considerado como tal).
 
 ## 2. Descrição do Projeto
 
@@ -135,12 +138,15 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
  - Descrição dos passos seguintes após a conclusão do documento, com uma visão geral do cronograma para Portfólio I e II.
  - Definição de Marcos: Estabelecer datas para entregas intermediárias e checkpoints.
 
-
 ## 5. Referências
 
 1. <a id="ref-1">WIKIPÉDIA.</a> *Roguelike*. Wikipédia, a enciclopédia livre, 2025. Disponível em: [https://pt.wikipedia.org/wiki/Roguelike](https://pt.wikipedia.org/wiki/Roguelike). Acesso em: 07 out. 2025.
 2. <a id="ref-2">ZAPATA,</a> Santiago. *On the Historical Origin of the “Roguelike” Term*. Slashie’s Gamedev Adventures, v. 1.2.1, 13 nov. 2017. Disponível em: [https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/](https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/). Acesso em: 07 out. 2025.
 3. <a id="ref-3">GROUPS GOOGLE.</a> RFD: rec.games.dungeon.* hierarchy. Google Groups, 1993. Disponível em: [https://groups.google.com/g/news.groups/c/CdWOd-M6g-w/m/cgNn2b9uU2sJ](https://groups.google.com/g/news.groups/c/CdWOd-M6g-w/m/cgNn2b9uU2sJ). Acesso em: 07 out. 2025.
+4. <a id="ref-4">ROCK PAPER SHOTGUN.</a> O que é um Roguelike?. Disponível em: [https://www.rockpapershotgun.com/what-is-a-roguelike](https://www.rockpapershotgun.com/what-is-a-roguelike). Acesso em: 11 nov. 2025.
+5. <a id="ref-5">PENNY-ARCADE.</a> What the hell is a roguelike? We try to hash out a definition. Disponível em: [https://web.archive.org/web/20130607061437/http://penny-arcade.com/report/article/what-the-hell-is-a-roguelike-we-try-to-hash-out-a-definition](https://web.archive.org/web/20130607061437/http://penny-arcade.com/report/article/what-the-hell-is-a-roguelike-we-try-to-hash-out-a-definition). Acesso em: 11 nov. 2025.
+6. <a id="ref-6">ROUGE LEGACY.</a> Disponível em: [https://store.steampowered.com/app/241600/Rogue_Legacy/](https://store.steampowered.com/app/241600/Rogue_Legacy/). Acesso em: 11 nov. 2025.
+7. <a id="ref-7">AUTOR(ES) DESCONHECIDO(S).</a> Título do artigo. Disponível em: https://dl.acm.org/doi/epdf/10.1145/358728.358731. Acesso em: 12 nov. 2025.
 
 - OPEN GAME ART. [S. l.: s. n.], [s. d.]. Disponível em: [https://opengameart.org/](https://opengameart.org/). Acesso em: 15 set. 2025.
 - BEEPBOX. [S. l.: s. n.], [s. d.]. Disponível em: [https://www.beepbox.co/](https://www.beepbox.co/). Acesso em: 15 set. 2025.
@@ -155,6 +161,7 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 - MARCOS GAMEDEV. **Como foi criar o meu próprio Motor de Jogo?**. [S. l.]: YouTube, 21 out. 2023. Disponível em: [https://www.youtube.com/watch?v=opBd-Oa6wMk](https://www.youtube.com/watch?v=opBd-Oa6wMk). Acesso em: 15 set. 2025.
 - MGYS - MAKE GAME YOURSELF. [S. l.: s. n.], [s. d.]. Planilha Google. Disponível em: [https://docs.google.com/spreadsheets/d/1Mqcqh9G20bH4nwyVIQn3OIXHdL8gzgyztdC6b8exiQM/edit?gid=88563757#gid=88563757](https://docs.google.com/spreadsheets/d/1Mqcqh9G20bH4nwyVIQn3OIXHdL8gzgyztdC6b8exiQM/edit?gid=88563757#gid=88563757). Acesso em: 15 set. 2025.
 - NEWZOO. **Newzoo Global Games Market Report 2025**. [S. l.]: Newzoo, 2025. Disponível em: [https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025](https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025). Acesso em: 15 set. 2025.
+- CARTLIDGE. [S. l.: s. n.], [s. d.]. Disponível em: [https://gamestudies.org/2403/articles/cartlidge](https://gamestudies.org/2403/articles/cartlidge). Acesso em: 11 nov. 2025.
 
 
 ## 6. Apêndices (Opcionais)
