@@ -16,7 +16,7 @@
     </tr>
     <tr>
         <td><strong>Data de Entrega</strong></td>
-        <td>05/06/2026</td>
+        <td>05/07/2026</td>
     </tr>
 </table>
 
@@ -83,15 +83,143 @@ Na carta, em resumo, era apresentado ao público da época (1982) que "pixel art
 
 ## 2. Descrição do Projeto
 
-* **Linha de Projeto**: Indique a categoria do projeto (Web Apps, Aplicações Mobile, Jogos Digitais, Projetos com IA ou Projetos IoT), conforme definido no regulamento.
-* **Tema do Projeto**: Descreva de forma clara e objetiva o produto, serviço ou ferramenta a ser desenvolvido.
-* **Propósito e Uso Prático**: Explique qual problema real será resolvido e como a solução será utilizada na prática.
-* **Público-Alvo**: Defina o perfil dos usuários ou clientes potenciais que se beneficiarão da solução.
-* **Problemas a Resolver**: Liste de forma objetiva os principais problemas ou necessidades que o projeto pretende atender.
-* **Diferenciação/Ineditismo**: Destaque o que torna a proposta única em relação a soluções existentes, mesmo quando o tema é semelhante a outros projetos.
-* **Limitações**: Especifique o que o projeto **não** abrangerá, evitando expectativas incorretas.
-* **Normas e Legislações Aplicáveis**: Liste normas, leis e diretrizes relevantes ao contexto do projeto (ex.: LGPD, HIPAA, WCAG, ESRB/PEGI), indicando como serão observadas.
-* **Métricas de Sucesso**: Apresente critérios iniciais para medir o desempenho e a efetividade do projeto (ex.: tempo de resposta, número de usuários atendidos, taxa de acerto do modelo de IA).
+Makolindo Ascension trata-se de um **jogo digital** ambientado em um universo utópico mágico parecido ao século 16, onde o jogador irá acompanhar a história de "Makolindo", um ser místico com poderes divinos que ajuda todos aqueles que tenham uma alma digna de respeito (que não fazem mal a ninguém, trabalham corretamente e buscam o conhecimento), oferecendo seus **poderes de cura**, **proteção sagrada** e **visão do futuro**.
+
+### 2.1 Tema do Projeto
+
+O jogo será construído ao estilo _roguelite_ (como definido anteriormente) e _dungeon crawler_ — exploração de masmorras — ao estilo _pixel art_ (também definido anteriormente) com foco em 16x16 _bits_. Terá como objetivo principal, contar uma história de superação de desafios relacionados a depressão, traição e desmerecimento, além de, uma _gameplay_ de combate dinâmica voltada a combinação de diversos itens, armas e poderes fixos do Makolindo e uma geração de salas aleatória/procedural.
+
+### 2.2 Propósito e Uso Prático
+
+Como citado anteriormente, o foco será narrar uma história complexa envolvendo a depressão principalmente, onde será apresentado ao jogador os efeitos de um transtorno mental tão grave, seus efeitos no usuário (pessoa afetada) e como pode ser tratada. Vale ressaltar que o jogo não explicará de forma clara e direta que o Makolindo tem tal transtorno mental, nem sequer explicações acadêmicas sobre.
+
+Será tratado de forma visual os efeitos do transtorno, como "demônios" aparecendo em tela, interações do Makolindo com personagens "que não existem" (só ele vê), modo como Makolindo se comporta com outros personagens e falas randômicas do mesmo sobre seus sentimentos. Para concepção e base das ideias sobre como apresentar ao jogador tal transtorno, o livro "Ansiedade: Como enfrentar o mal do século" (2013)<sup>[[8]](#ref-8)</sup> de [Augusto Cury](https://pt.wikipedia.org/wiki/Augusto_Cury), as experiências do autor diante de dois anos de terapia e da convivência com pessoas próximas com depressão e artigos acadêmicos<sup>[[9]](#ref-9)[[10]](#ref-10)[[11]](#ref-11)</sup>.
+
+O jogador será motivado constantemente a ignorar os sintomas (estimulos visuais) enfrentados por Makolindo, por meio de conversação com demais personagens durante o jogo, ao utilizar os poderes especiais de Makolindo para ajudar NPC's durante a caminhada na masmorra e escolhendo itens com _buffs_ melhores que os demais, e que ajudam Makolindo a lutar contra seu transtorno.
+
+### 2.3 Público-Alvo
+
+Será voltado para amantes de jogos digitais, os quais gostam (ou tem preferência por) de jogos dos gêneros _roguelike_ e/ou _roguelite_, com elementos de _dungeon crawler_, fantasia/magia, "história ativa" e construção de _builds_. A faixa etária ideal está entre 16-30 anos de idade, pois conterá linguagem imprópria (como palavrões) e representações de "sangue" (após causar dano nos inimigos) em determinados momentos do jogo.
+
+### 2.4 Problemas a Resolver
+
+Por se tratar de um jogo digital, o foco não está em resolver qualquer questão específica da industria ou sociedade no geral, por meio da construção de um _software_, como demais projetos. Ainda sim, serão abordados os seguintes pontos:
+
+| **Questão** | **Como Será Tratado?** |
+|-------------|------------------------|
+| Depressão | Por meio do enredo, elementos visuais e funcionais _in-game_. |
+| Geração de Mundo Procedural | Por meio de aleatorização e funções matemáticas, as salas (mundo) serão sempre construídas de forma procedural/aleatória. |
+| Combate em Tempo Real | Assim que o jogador entrar em uma sala com inimigos, os mesmos farão todo possível para eliminar o jogar. O jogador poderá desviar dos ataques e deverá evitar sua própria morte, afim de continuar jogando. |
+
+### 2.5 Diferenciação/Ineditismo
+
+Makolindo Ascension busca tratar de forma "lúdica" em alguns aspectos, o funcionamento do transtorno mental conhecido como "Depressão", com expressões visuais e mecânicas _in-game_.
+
+### 2.6 Limitações
+
+Abaixo, veremos todos os sistemas que conterão (sem explicação técnica ainda) com a pontuação de suas limitações:
+
+<table align="center">
+    <tr>
+        <td><strong>Sistema</strong></td>
+        <td><strong>Limitações</strong></td>
+    </tr>
+    <tr>
+        <td>Itens</td>
+        <td>
+            <ul>
+                <li>Serão criados apenas dois itens simples, um com um <i>buff</i> e outro com um <i>debuff</i>;</li>
+                <li>Não terão mecânicas complexas que alterem outras funcionalidades do jogo, apenas alterações de <i>status</i> base do jogador.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Armas</td>
+        <td>
+            <ul>
+                <li>Haverá apenas duas armas corpo a corpo e uma à distância;</li>
+                <li>Armas não terão habilidades próprias;</li>
+                <li>Seus multiplicadores de dano não serão escaláveis.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Habilidades do Jogador</td>
+        <td>
+            <ul>
+                <li>Haverão apenas três habilidades únicas;</li>
+                <li>Poderão receber apenas um <i>upgrade</i>;</li>
+                <li>Não serão customizáveis.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Inimigos</td>
+        <td>
+            <ul>
+                <li>Existirão apenas três tipos de inimigos: um comum (com pouca vinda e dano), um <i>tank</i> (com mais vida e mesma quantidade de dano do comum) e um <i>ranged</i> (a distância);</li>
+                <li>Inimigos sempre terão a mesma aparência.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Mecânicas</td>
+        <td>
+            <ul>
+                <li>Não haverá sistema de armadilhas e/ou <i>puzzles</i>;</li>
+                <li>Não haverá a loja de itens <i>in-game</i>;</li>
+                <li>A câmera sempre ficará seguindo o jogador, mas ficará fixa na sala atual em que o jogador estiver;</li>
+                <li>A história será limitada apenas a abrangir os acontecimentos até a queda de Makolindo.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+### 2.7 Normas e Legislações Aplicáveis
+
+Serão listadas algumas normas e legislações relevantes ao contexto do jogo, e como podem vir a afetar o seu desenvolvimento.
+
+#### 2.7.1 ESRB
+
+A _Entertainment Software Rating Board_ — ESRB — é uma organização independente que analisa, decide e coloca classificações etárias indicativas para jogos eletrônicos comercializados na América do Norte<sup>[[12]](#ref-12)</sup>. Realizam uma validação do jogo com um sistema próprio de três partes, analisando conteúdos como linguagem, conteúdo sexual, sangue/_gore_, drogas e etc.
+
+Após análise do jogo, o mesmo poderá ser indicado em uma de suas classificações, cada uma com suas limitações quanto aos conteúdos delimitados pelos mesmos. No caso de Makolindo Ascension, o jogo será desenvolvido para se enquadrar na classificação **_Mature 17+_**, que diz o seguinte:
+
+> Content is generally suitable for ages 17 and up. May contain intense violence, blood and gore, sexual content and/or strong language<sup>[[13]](#ref-13)</sup>.
+
+Traduzindo de forma simples, títulos nessa categoria podem conter violência (como agressão física, luta, sangue), procedimentos médicos, jogos de azar simulado, conteúdos com temas sexuais leve como insinuação sexual, nudez velada, consumo de álcool e/ou cigarro e/ou uso de linguagem imprópria. Como citado anteriormente, não necessariamente todos os elementos desta categoria estarão no jogo, mas como será tratado de depressão, podendo haver referências a suicídio, haverá combate com sangue e linguagem imprópria, o mesmo não pode se classificar na classificação anterior _Teen_ (que contém conteúdo bastante moderado quanto aos assuntos citados).
+
+#### 2.7.2 PEGI
+
+A _Pan European Game Information_ — PEGI — é o sistema europeu de classificação de conteúdo de jogos eletrônicos, utilizado em mais de 30 países. Diferente da ESRB, que foca no mercado norte-americano, a PEGI é o padrão para a Europa e utiliza uma combinação de faixas etárias e ícones descritivos de conteúdo para informar os consumidores.
+
+Para Makolindo Ascension, considerando os temas abordados (depressão, violência com sangue, linguagem imprópria), o jogo se enquadraria na classificação **PEGI 16**. Esta classificação é definida da seguinte forma:
+
+> Esta classificação é aplicada quando a representação de violência (ou atividade sexual) atinge um nível que parece igual ao que seria esperado na vida real. O uso de linguagem imprópria em jogos PEGI 16 pode ser mais extremo, assim como o uso de tabaco, álcool ou drogas ilegais<sup>[[14]](#ref-14)</sup>.
+
+Embora o jogo utilize um estilo visual em _pixel art_, o que muitas vezes atenua o impacto visual da violência ("violência não realista"), a presença de temas psicológicos pesados, sangue visível durante o combate e o uso de linguagem chula elevam a classificação para além do PEGI 12. A classificação PEGI 18 seria reservada para violência "gratuita" ou representações muito específicas de violência sexual e uso de drogas, o que não é o foco principal do projeto. Portanto, a faixa de 16 anos é a mais adequada para o público-alvo e o conteúdo proposto.
+
+#### 2.7.3 ClassInd
+
+A Classificação Indicativa (ClassInd) é o sistema brasileiro de classificação de conteúdo, regulamentado pelo Ministério da Justiça e Segurança Pública. Diferente de sistemas como ESRB e PEGI, a ClassInd é uma política pública que visa informar às famílias sobre a adequação de conteúdos audiovisuais e jogos eletrônicos para diferentes faixas etárias, baseando-se na proteção de crianças e adolescentes.
+
+Para Makolindo Ascension, considerando os elementos descritos anteriormente, o jogo se enquadra na classificação **16 anos (Não recomendado para menores de dezesseis anos)**.
+
+De acordo com o Guia Prático da Classificação Indicativa (2025)<sup>[[15]](#ref-15)</sup>, obras classificadas como "16 anos" podem conter:
+*   **Violência:** Presença de violência frequente, com produção de sangue ou lesão corporal, ou violência gratuita (sem motivação narrativa forte), desde que não seja de extrema crueldade.
+*   **Sexo e Nudez:** Conteúdos que apresentem insinuação sexual ou nudez velada, mas sem cenas de sexo explícito.
+*   **Drogas:** Consumo de drogas lícitas ou ilícitas, desde que não haja indução ao uso.
+*   **Temas Sensíveis:** Abordagem de temas como suicídio, automutilação ou transtornos mentais com certo grau de impacto ou realismo, exigindo maior maturidade do público.
+
+A classificação "18 anos" seria aplicada apenas se houvesse cenas de sexo explícito, apologia à violência extrema/crueldade ou indução ao uso de drogas, o que excede o escopo do projeto. Portanto, a faixa de 16 anos é a mais adequada para garantir a conformidade com a legislação brasileira e a proteção do público infantojuvenil.
+
+### 2.8 Métricas de Sucesso
+
+Para quantificar o "sucesso" do jogo quanto ao âmbito acadêmico e pessoal do desenvolvedor, serão observados os seguintes pontos:
+
+- **Número de Downloads**: Após completudo do MVP do jogo (escopo do RFC apenas), o mesmo será publicado no site gratuíto [itch.io](https://itch.io/) de disponibilização de jogos e conteúdos relaciodos, um sucesso para tal projeto será considerado o número de **cem (100) _downloads_**;
+- **Avaliações**: No mesmo site citado anteriormente, jogadores podem avaliar o jogo por meio de análises descritivas e pontuação em uma escala de 1 à 5 estrelas, além disso, será levado em conta as avaliações de professores, testadores e "público de fora". Para tal, será considera uma nota base de **3.5 estrelas no mínimo**;
+- **Fluidez**: O jogo será testado em diversos sistemas operacionais e em computadores com _hardwares_ distintos, buscando **não encontrar** travamentos nem _crashes_ (corrupção e/ou fechamento imediato do jogo). Para isso, será avaliado uma taxa base de **secenta (60) quadros por segundo** — mais conhecido "FPS" — e **zero _crashes_**. 
 
 ## 3. Especificação Técnica
 
@@ -140,13 +268,21 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 
 ## 5. Referências
 
-1. <a id="ref-1">WIKIPÉDIA.</a> *Roguelike*. Wikipédia, a enciclopédia livre, 2025. Disponível em: [https://pt.wikipedia.org/wiki/Roguelike](https://pt.wikipedia.org/wiki/Roguelike). Acesso em: 07 out. 2025.
-2. <a id="ref-2">ZAPATA,</a> Santiago. *On the Historical Origin of the “Roguelike” Term*. Slashie’s Gamedev Adventures, v. 1.2.1, 13 nov. 2017. Disponível em: [https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/](https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/). Acesso em: 07 out. 2025.
+1. <a id="ref-1">WIKIPÉDIA.</a> <i>Roguelike</i>. Wikipédia, a enciclopédia livre, 2025. Disponível em: [https://pt.wikipedia.org/wiki/Roguelike](https://pt.wikipedia.org/wiki/Roguelike). Acesso em: 07 out. 2025.
+2. <a id="ref-2">ZAPATA,</a> Santiago. <i>On the Historical Origin of the “Roguelike” Term</i>. Slashie’s Gamedev Adventures, v. 1.2.1, 13 nov. 2017. Disponível em: [https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/](https://blog.slashie.net/on-the-historical-origin-of-the-roguelike-term/). Acesso em: 07 out. 2025.
 3. <a id="ref-3">GROUPS GOOGLE.</a> RFD: rec.games.dungeon.* hierarchy. Google Groups, 1993. Disponível em: [https://groups.google.com/g/news.groups/c/CdWOd-M6g-w/m/cgNn2b9uU2sJ](https://groups.google.com/g/news.groups/c/CdWOd-M6g-w/m/cgNn2b9uU2sJ). Acesso em: 07 out. 2025.
 4. <a id="ref-4">ROCK PAPER SHOTGUN.</a> O que é um Roguelike?. Disponível em: [https://www.rockpapershotgun.com/what-is-a-roguelike](https://www.rockpapershotgun.com/what-is-a-roguelike). Acesso em: 11 nov. 2025.
-5. <a id="ref-5">PENNY-ARCADE.</a> What the hell is a roguelike? We try to hash out a definition. Disponível em: [https://web.archive.org/web/20130607061437/http://penny-arcade.com/report/article/what-the-hell-is-a-roguelike-we-try-to-hash-out-a-definition](https://web.archive.org/web/20130607061437/http://penny-arcade.com/report/article/what-the-hell-is-a-roguelike-we-try-to-hash-out-a-definition). Acesso em: 11 nov. 2025.
+5. <a id="ref-5">PENNY-ARCADE.</a> <i>What the hell is a roguelike? We try to hash out a definition</i>. Disponível em: [https://web.archive.org/web/20130607061437/http://penny-arcade.com/report/article/what-the-hell-is-a-roguelike-we-try-to-hash-out-a-definition](https://web.archive.org/web/20130607061437/http://penny-arcade.com/report/article/what-the-hell-is-a-roguelike-we-try-to-hash-out-a-definition). Acesso em: 11 nov. 2025.
 6. <a id="ref-6">ROUGE LEGACY.</a> Disponível em: [https://store.steampowered.com/app/241600/Rogue_Legacy/](https://store.steampowered.com/app/241600/Rogue_Legacy/). Acesso em: 11 nov. 2025.
-7. <a id="ref-7">AUTOR(ES) DESCONHECIDO(S).</a> Título do artigo. Disponível em: https://dl.acm.org/doi/epdf/10.1145/358728.358731. Acesso em: 12 nov. 2025.
+7. <a id="ref-7">GOLDBERG</a> Adele. <i>Pixel Art</i>. Disponível em: https://dl.acm.org/doi/epdf/10.1145/358728.358731. Acesso em: 12 nov. 2025.
+8. <a id="ref-8">CURY</a> Augusto. Ansiedade: Como Enfrentar o Mal do Século. Disponível em: [https://www.amazon.com.br/ANSIEDADE-COMO-ENFRENTAR-MAL-S%C3%89CULO-ebook/dp/B0762J55MW/ref=tmm_kin_swatch_0](https://www.amazon.com.br/ANSIEDADE-COMO-ENFRENTAR-MAL-S%C3%89CULO-ebook/dp/B0762J55MW/ref=tmm_kin_swatch_0). Acesso em: 17 nov. 2025.
+9. <a id="ref-9">PEREIRA</a>, Lucélia Grace Gonçalves. Depressão, o Mal do Século XXI: Possíveis Diagnósticos e Tratamentos. Repositório Institucional da UFMG. Disponível em: [https://repositorio.ufmg.br/server/api/core/bitstreams/385a02c7-abfe-48e3-9f82-26cebcf601c8/content](https://repositorio.ufmg.br/server/api/core/bitstreams/385a02c7-abfe-48e3-9f82-26cebcf601c8/content). Acesso em: 17 nov. 2025.
+10. <a id="ref-10">QUEVEDO</a>, João; NARDI, Antonio Egidio; SILVA, Antônio Geraldo da (Org.). Depressão: Teoria e Clínica. Disponível em: [https://books.google.com.br/books?id=KTVxDwAAQBAJ](https://books.google.com.br/books?id=KTVxDwAAQBAJ). Acesso em: 17 nov. 2025.
+11. <a id="ref-11">MAIA</a>, Berta Rodrigues; DIAS, Paulo César. Ansiedade, depressão e estresse em estudantes universitários: o impacto da COVID-19. Psicologia: Teoria e Pesquisa, 2020. Disponível em: [http://dx.doi.org/10.1590/1982-0275202037e200067](http://dx.doi.org/10.1590/1982-0275202037e200067). Acesso em: 17 nov. 2025.
+12. <a id="ref-12">ESRB</a>. <i>About ESRB</i>, 2025. Disponível em: [https://www.esrb.org/about/](https://www.esrb.org/about/). Acesso em: 25 nov. 2025.
+13. <a id="ref-13">ESRB</a>. <i>Ratings Guide</i>, 2025. Disponível em: [https://www.esrb.org/ratings-guide/](https://www.esrb.org/ratings-guide/). Acesso em: 25 nov. 2025.
+14. <a id="ref-14">PEGI</a>. <i>PEGI 16</i>, 2025. Disponível em: [https://pegi.info/pt-pt/pegi-16](https://pegi.info/pt-pt/pegi-16). Acesso em: 25 nov. 2025.
+15. <a id="ref-15">CLASSIND</a>. Guia Prático de Audiovisual, RPG e aplicativos - 2025, 2025. Disponível em: [https://www.gov.br/mj/pt-br/assuntos/seus-direitos/classificacao-1/classind-audio-visual-2025-vs-10-nova-faixa.pdf/view](https://www.gov.br/mj/pt-br/assuntos/seus-direitos/classificacao-1/classind-audio-visual-2025-vs-10-nova-faixa.pdf/view). Acesso em: 25 nov. 2025.
 
 - OPEN GAME ART. [S. l.: s. n.], [s. d.]. Disponível em: [https://opengameart.org/](https://opengameart.org/). Acesso em: 15 set. 2025.
 - BEEPBOX. [S. l.: s. n.], [s. d.]. Disponível em: [https://www.beepbox.co/](https://www.beepbox.co/). Acesso em: 15 set. 2025.
