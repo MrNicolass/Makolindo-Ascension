@@ -77,7 +77,7 @@ Embora [_Spelunky_](https://spelunkyworld.com/original.html) (2008) e [_The Bind
 A origem do estilo _pixel art_ denota de jogos clássicos como [_Space Invaders_](https://en.wikipedia.org/wiki/Space_Invaders) (1978) e [_Pac-Man_](https://en.wikipedia.org/wiki/Pac-Man) (1980), assim como de videogames da mesma época, onde toda arte visual era focada em poucos grupos de blocos 8-bit. Entretanto, o surgimento do termo "_pixel art_" foi dado em 1982 em uma carta de diário publicada por [Adele Goldberg](https://en.wikipedia.org/wiki/Adele_Goldberg_(computer_scientist)) e Robert Flegal, do centro de pesquisa da Xerox em Palo Alto<sup>[[7]](#ref-7)</sup>:
 
 ![Artigo "Pixel Art" de Adele Goldberg e Robert Flegak](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgB4kzQatlgP_W2eEFmac_LPfnt4D3-_QVVoof6ECNOhIa3uckh16-KyBSdZqslL9lNFO8QK95lwUim1R7PQhpr8_aIaOdDnPwu-oA3BkzezD6W3-V94OCfyYGzFgt7Q-ptfDNhIJ3aDDYR/s400/image004.gif)
-<p align="center"><em>Figura 2. Pequeno trecho da carta públicada sobre "pixel art".</em></p>
+<p align="center"><em>Figura 2. Pequeno trecho da carta publicada sobre "pixel art".</em></p>
 
 Na carta, em resumo, era apresentado ao público da época (1982) que "pixel art" era quase todo tipo de representação visual criada/apresentada por um computador (como no exemplo acima, onde um _scan_ de uma foto foi considerado como tal).
 
