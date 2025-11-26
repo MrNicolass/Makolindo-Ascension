@@ -36,7 +36,7 @@ Antes de seguir com a explanação do projeto, será introduzido os conceitos ne
 
 ### 1.1. Origem e significado do gênero _roguelike_
 
-Para entendermos o significado de _roguelite_, primeiro veremos rapidamente o significado do termo _roguelike_, seu predecessor. O termo "_roguelite_" surgiu por volta de 1993 nos grupos de notícias da Usenet<sup>[[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3)</sup> (plataforma "pré web" de comunicação por texto, com fóruns e notícias), sendo citado pela primeira ver por Andrew Solovay, em uma discussão sobre a criação de um novo fórum específico para discussões sobre jogos como [_Hack_](https://www.nethack.org/), [_Moria_](https://umoria.org/) e [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/). Foi nesta discussão onde definiu-se que o subfórum se chamaria "rec.games.roguelike.*", pois entre todos os jogos, [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/) era considerado o mais antigo entre eles.
+Para entendermos o significado de _roguelite_, primeiro veremos rapidamente o significado do termo _roguelike_, seu predecessor. O termo "_roguelite_" surgiu por volta de 1993 nos grupos de notícias da Usenet<sup>[[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3)</sup> (plataforma "pré web" de comunicação por texto, com fóruns e notícias), sendo citado pela primeira vez por Andrew Solovay, em uma discussão sobre a criação de um novo fórum específico para discussões sobre jogos como [_Hack_](https://www.nethack.org/), [_Moria_](https://umoria.org/) e [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/). Foi nesta discussão onde definiu-se que o subfórum se chamaria "rec.games.roguelike.*", pois entre todos os jogos, [_Rogue_](https://store.steampowered.com/app/1443430/Rogue/) era considerado o mais antigo entre eles.
 
 ![Exemplo de Roguelite](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1443430/ss_8133cd666690fc773913cc0d1eb93b7e8bfc1ae3.1920x1080.jpg?t=1651574702)
 <p align="center"><em>Figura 1. Imagem de uma das fases do game <a href="https://store.steampowered.com/app/1443430/Rogue/?l=portuguese">Rogue</a>.</em></p>
@@ -62,7 +62,7 @@ Então em 2008, foi realizado em Berlim, a primeira conferência Internacional d
     - Mapas tipo masmorra, com salas e corredores;
     - Números e estatísticas visíveis (vida, força, dano etc.).
 
-Esses são considerados até hoje, os pontos base para a criação de um "_roguelike_ puro sangue", isso é claro, contendo algumas alterações com base na atualiade.
+Esses são considerados até hoje, os pontos base para a criação de um "_roguelike_ puro sangue", isso é claro, contendo algumas alterações com base na atualidade.
 
 ### 1.2. Origem e significado do gênero _roguelite_
 
@@ -109,7 +109,7 @@ Por se tratar de um jogo digital, o foco não está em resolver qualquer questã
 |-------------|------------------------|
 | Depressão | Por meio do enredo, elementos visuais e funcionais _in-game_. |
 | Geração de Mundo Procedural | Por meio de aleatorização e funções matemáticas, as salas (mundo) serão sempre construídas de forma procedural/aleatória. |
-| Combate em Tempo Real | Assim que o jogador entrar em uma sala com inimigos, os mesmos farão todo possível para eliminar o jogar. O jogador poderá desviar dos ataques e deverá evitar sua própria morte, afim de continuar jogando. |
+| Combate em Tempo Real | Assim que o jogador entrar em uma sala com inimigos, os mesmos farão todo possível para eliminar o jogador. O jogador poderá desviar dos ataques e deverá evitar sua própria morte, afim de continuar jogando. |
 
 ### 2.5 Diferenciação/Ineditismo
 
@@ -217,7 +217,7 @@ A classificação "18 anos" seria aplicada apenas se houvesse cenas de sexo expl
 
 Para quantificar o "sucesso" do jogo quanto ao âmbito acadêmico e pessoal do desenvolvedor, serão observados os seguintes pontos:
 
-- **Número de Downloads**: Após completado do MVP do jogo (escopo do RFC apenas), o mesmo será publicado no site gratuíto [itch.io](https://itch.io/) de disponibilização de jogos e conteúdos relaciodos, um sucesso para tal projeto será considerado o número de **cem (100) _downloads_**;
+- **Número de Downloads**: Após completado do MVP do jogo (escopo do RFC apenas), o mesmo será publicado no site gratuíto [itch.io](https://itch.io/) de disponibilização de jogos e conteúdos relacionados, um sucesso para tal projeto será considerado o número de **cem (100) _downloads_**;
 - **Avaliações**: No mesmo site citado anteriormente, jogadores podem avaliar o jogo por meio de análises descritivas e pontuação em uma escala de 1 à 5 estrelas, além disso, será levado em conta as avaliações de professores, testadores e "público de fora". Para tal, será considera uma nota base de **3.5 estrelas no mínimo**;
 - **Fluidez**: O jogo será testado em diversos sistemas operacionais e em computadores com _hardwares_ distintos, buscando **não encontrar** travamentos nem _crashes_ (corrupção e/ou fechamento imediato do jogo). Para isso, será avaliado uma taxa base de **secenta (60) quadros por segundo** — mais conhecido "FPS" — e **zero _crashes_**. 
 
