@@ -157,7 +157,7 @@ Abaixo, veremos todos os sistemas que conterão (sem explicação técnica ainda
         <td>Inimigos</td>
         <td>
             <ul>
-                <li>Existirão apenas três tipos de inimigos: um comum (com pouca vinda e dano), um <i>tank</i> (com mais vida e mesma quantidade de dano do comum) e um <i>ranged</i> (a distância);</li>
+                <li>Existirão apenas três tipos de inimigos: um comum (com pouca vida e dano), um <i>tank</i> (com mais vida e mesma quantidade de dano do comum) e um <i>ranged</i> (a distância);</li>
                 <li>Inimigos sempre terão a mesma aparência.</li>
             </ul>
         </td>
