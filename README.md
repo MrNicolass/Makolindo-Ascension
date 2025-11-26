@@ -217,7 +217,7 @@ A classificação "18 anos" seria aplicada apenas se houvesse cenas de sexo expl
 
 Para quantificar o "sucesso" do jogo quanto ao âmbito acadêmico e pessoal do desenvolvedor, serão observados os seguintes pontos:
 
-- **Número de Downloads**: Após completudo do MVP do jogo (escopo do RFC apenas), o mesmo será publicado no site gratuíto [itch.io](https://itch.io/) de disponibilização de jogos e conteúdos relaciodos, um sucesso para tal projeto será considerado o número de **cem (100) _downloads_**;
+- **Número de Downloads**: Após completado do MVP do jogo (escopo do RFC apenas), o mesmo será publicado no site gratuíto [itch.io](https://itch.io/) de disponibilização de jogos e conteúdos relaciodos, um sucesso para tal projeto será considerado o número de **cem (100) _downloads_**;
 - **Avaliações**: No mesmo site citado anteriormente, jogadores podem avaliar o jogo por meio de análises descritivas e pontuação em uma escala de 1 à 5 estrelas, além disso, será levado em conta as avaliações de professores, testadores e "público de fora". Para tal, será considera uma nota base de **3.5 estrelas no mínimo**;
 - **Fluidez**: O jogo será testado em diversos sistemas operacionais e em computadores com _hardwares_ distintos, buscando **não encontrar** travamentos nem _crashes_ (corrupção e/ou fechamento imediato do jogo). Para isso, será avaliado uma taxa base de **secenta (60) quadros por segundo** — mais conhecido "FPS" — e **zero _crashes_**. 
 
