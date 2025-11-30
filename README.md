@@ -121,8 +121,8 @@ Abaixo, veremos todos os sistemas que conterão (sem explicação técnica ainda
 
 <table align="center">
     <tr>
-        <td><strong>Sistema</strong></td>
-        <td><strong>Limitações</strong></td>
+        <th>Sistema</th>
+        <th>Limitações</th>
     </tr>
     <tr>
         <td>Itens</td>
@@ -225,13 +225,13 @@ Para quantificar o "sucesso" do jogo quanto ao âmbito acadêmico e pessoal do d
 
 Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnologias, segurança e aderência aos critérios obrigatórios da linha de projeto escolhida.
 
-### 3.1. Requisitos de Software
+### 3.1 Requisitos de Software
 - **Requisitos Funcionais (RF)**: Liste de forma clara as funcionalidades que o sistema deverá oferecer.
 - **Requisitos Não-Funcionais (RNF)**: Inclua requisitos de desempenho, segurança, usabilidade, escalabilidade, disponibilidade, entre outros.
 - **Representação dos Requisitos**: Inclua um Diagrama de Casos de Uso (UML) ou outra representação visual que facilite o entendimento.
 - **Aderência aos Requisitos da Linha de Projeto**: Indique como cada requisito está alinhado aos itens “Obrigatório Atender” definidos para a linha de projeto (Web, Mobile, Jogos, IA ou IoT).
 
-### 3.2. Considerações de Design
+### 3.2 Considerações de Design
 - **Visão Inicial da Arquitetura**: Apresente os principais componentes e suas interações.
 - **Padrões de Arquitetura**: Informe padrões adotados (ex.: [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [Microserviços](https://microservices.io/), [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), Arquitetura em Camadas).
 - **Modelos C4**: Utilize os quatro níveis ([C4 Model](https://c4model.com/)) quando aplicável.
@@ -239,27 +239,99 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 - **Decisões e Alternativas Consideradas**: Justifique escolhas de design, documentando alternativas avaliadas.
 - **Critérios de Escalabilidade, Resiliência e Segurança**: Descreva como a solução será projetada para suportar crescimento, lidar com falhas e manter segurança.
 
-### 3.3. Stack Tecnológica
-- **Linguagens de Programação**: Liste e justifique as escolhas.
-- **Frameworks e Bibliotecas**: Detalhe e justifique a seleção.
-- **Ferramentas de Desenvolvimento e Gestão**: Inclua IDEs, sistemas de versionamento, plataformas de integração contínua, monitoramento, entre outros.
-- **Licenciamento**: Indique as licenças dos softwares e bibliotecas utilizados ([MIT](https://opensource.org/licenses/MIT), [GPL](https://www.gnu.org/licenses/gpl-3.0.html), [Apache](https://www.apache.org/licenses/), [Creative Commons](https://creativecommons.org/licenses/)).
+### 3.3 Stack Tecnológica
 
-### 3.4. Considerações de Segurança
-- **Riscos Identificados**: Liste ameaças potenciais (ex.: injeção de código, vazamento de dados, falhas de autenticação).
-- **Medidas de Mitigação**: Explique as ações planejadas para minimizar riscos (ex.: criptografia, controle de acesso, validação de entrada).
-- **Normas e Boas Práticas Seguidas**: Cite padrões como [OWASP Top 10](https://owasp.org/www-project-top-ten/), [ISO/IEC 27001](https://www.iso.org/isoiec-27001-information-security.html), [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm) ou outros aplicáveis.
-- **Responsabilidade Ética**: Para projetos de IA ou manipulação de dados sensíveis, descreva como serão tratados vieses, privacidade e uso responsável ([UNESCO – Ética em IA](https://unesdoc.unesco.org/ark:/48223/pf0000380455), [OECD AI Principles](https://oecd.ai/en/ai-principles)).
+<table align="center">
+    <tr>
+        <th>Categoria</th>
+        <th>Escolha</th>
+        <th>Justificativa</th>
+    </tr>
+    <tr>
+        <td>Linguagem de Programação</td>
+        <td>GML</td>
+        <td>A GameMaker Language — GML — é uma linguagem simples de se utilizar e baseada em eventos (<i>Event Driven</i>), o que faz com que junto a sua IDE, ela seja completamente intuitiva, fácil e rápida de se construir sistemas complexos, ao custo de performance, que não fará diferença para este projeto.</td>
+    </tr>
+    <tr>
+        <td>Ferramentas de Desenvolvimento e Gestão</td>
+        <td>GameMaker Studio</td>
+        <td>
+            Plataforma completa de desenvolvimento de jogos de forma gratuita, onde contempla ferramentas de desenvolvimento (código), criação de arte (<i>Pixel Art</i>) e mais. A IDE permite exportação do jogo como um executável para diversas plataformas (Windows, Mac, Linux, Mobile e etc.), também, escolho  pois possuo licença de comercialização do software, me permitindo eventualmente anunciar forma paga.
+        </td>
+    </tr>
+    <tr>
+        <td>Ferramentas de Desenvolvimento e Gestão</td>
+        <td>Piskel</td>
+        <td>
+            Para casos onde o GameMaker não supra a necessidade da criação das <i>sprits</i> (artes do jogo) — como em casos mais complexos —, o Piskel será utilizado para tal, pois é uma ferramenta gratuita, simples e mais completa que o GameMaker Studio quanto a criação de arte.
+        </td>
+    </tr>
+    <tr>
+        <td>Ferramentas de Desenvolvimento e Gestão</td>
+        <td>Visual Studio Code — VScode</td>
+        <td>
+            IDE de desenvolvimento gratuita mais conhecida e utilizada atualmente, será utilizada única e exclusivamente para criação de documentos no formato <i>Markdown</i> (como este).
+        </td>
+    </tr>
+    <tr>
+        <td>Ferramentas de Desenvolvimento e Gestão</td>
+        <td>ClickUp</td>
+        <td>
+            Trata-se de uma ferramenta gratuita <i>online</i>, que engloba inúmeras funções, como quadro de tarefas, quadros brancos e ferramentas de documentação...de forma prática e eficaz. Será utilizado para realizar a prototipação inicial por meio de seu <i>Whiteboard</i> (quadro branco), documentação, criação de <i>sprints</i> e tarefas.
+        </td>
+    </tr>
+    <tr>
+        <td>Ferramentas de Desenvolvimento e Gestão</td>
+        <td>GitHub</td>
+        <td>
+            Ferramenta amplamente conhecida por realizar controle de versão código, hospedagem de código, análise de integrações de código (<i>Pull Requests</i>) por meio de IA com o Copilot, Wiki, <i>releases</i>, <i>pipelines</i> e mais. Será utilizado para realizar o controle de versionamento (pois tem integração direta com o GameMaker Studio), análise de <i>Pull Requests</i> com o Copilot, a construção de documentos oficiais com sua Wiki e os lançamentos de versão por meio de sua plataforma de <i>releases</i>.
+        </td>
+    </tr>
+    <tr>
+        <td><i>Frameworks</i> e Bibliotecas</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+</table>
 
-### 3.5. Conformidade e Normas Aplicáveis
-- Relacione todas as legislações, regulamentações e normas técnicas aplicáveis ao projeto, descrevendo brevemente como serão atendidas.
-- Exemplos:
-  - [LGPD – Lei Geral de Proteção de Dados](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm)
-    - Coletar apenas dados necessários (nome, contato, dados do imóvel).
-    - Evitar dados sensíveis desnecessários.
-    - Solicitar consentimento explícito e exibir política de privacidade clara.
-    - Permitir acesso, correção e exclusão de dados pelo usuário.
-    -   ...
+### 3.4 Considerações de Segurança
+
+Dado que o projeto é um jogo _single-player_ e _offline_, os riscos de segurança são diferentes dos de uma aplicação _web_ ou _mobile_ conectada. O foco se volta para a proteção da integridade do jogo e da experiência do usuário contra manipulações locais.
+
+- **Riscos Identificados**
+  - **Manipulação de Save Files:** Jogadores podem tentar editar manualmente os arquivos de salvamento para obter vantagens indevidas, como moedas, itens ou progresso desbloqueado;
+  - **Cheating via Memory Editing:** Uso de ferramentas de terceiros (como Cheat Engine) para alterar valores do jogo em tempo de execução (vida, dano, etc.), quebrando a curva de dificuldade e a experiência pretendida;
+  - **Engenharia Reversa e Pirataria:** Descompilação do executável do jogo para roubo de _assets_ (arte, música, código) ou para redistribuição não autorizada em canais não oficiais;
+- **Medidas de Mitigação**
+  - **Ofuscação de Dados de Salvamento:** Os dados de progresso do jogador não serão salvos em formato de texto plano (como `.ini` ou `.txt` simples). Em vez disso, será utilizada uma estrutura de dados (como `ds_map`) que será convertida para uma string JSON e, em seguida, codificada (ex: em Base64) ou criptografada antes de ser salva em um arquivo. Isso dificultará a leitura e edição manual. Um _checksum_ (soma de verificação) será incluído no arquivo de save para validar sua integridade no carregamento;
+  - **Compilação Nativa (YYC):** Para as versões de lançamento no Steam e Itch.io, o jogo será compilado usando o YoYo Compiler (YYC) do GameMaker em vez da máquina virtual padrão. O YYC converte o código GML para C++, resultando em um executável nativo que é significativamente mais difícil de descompilar e analisar do que o código interpretado;
+  - **Validação de Integridade:** Para futuras funcionalidades _online_ (como placares de líderes), todas as pontuações enviadas ao servidor incluirão um _hash_ de validação gerado a partir de dados da partida, para mitigar o envio de pontuações falsas;
+- **Normas e Boas Práticas Seguidas**
+  - **LGPD (Lei Geral de Proteção de Dados):** Conforme detalhado na seção 3.5, o jogo em seu escopo atual não coleta dados pessoais. Qualquer funcionalidade futura que envolva dados de usuário seguirá estritamente os princípios da LGPD, com políticas de privacidade claras e consentimento explícito.
+
+### 3.5 Conformidade e Normas Aplicáveis
+
+O projeto será desenvolvido em conformidade com as seguintes regulamentações e normas, garantindo sua adequação legal e ética para distribuição:
+
+- **ClassInd (Classificação Indicativa - Brasil)**
+  - **Norma:** Sistema de classificação de conteúdo do Ministério da Justiça e Segurança Pública do Brasil.
+  - **Como será atendida:** O jogo será desenvolvido para se enquadrar na classificação **"Não recomendado para menores de 16 anos"**. O conteúdo de violência (com representação de sangue), a linguagem imprópria e a abordagem de temas sensíveis como depressão serão mantidos em um nível que não exceda os limites definidos pelo Guia Prático da Classificação Indicativa para esta faixa etária, evitando violência de crueldade extrema ou apologia a drogas.
+
+- **ESRB (_Entertainment Software Rating Board_ - América do Norte)**
+  - **Norma:** Sistema de classificação etária para jogos eletrônicos na América do Norte.
+  - **Como será atendida:** O projeto almeja a classificação **"Mature 17+"**. Para isso, o conteúdo de violência, sangue e linguagem será desenvolvido de acordo com as diretrizes da ESRB para essa categoria, garantindo que os descritores de conteúdo sejam aplicados corretamente.
+
+- **PEGI (_Pan European Game Information_ - Europa)**
+  - **Norma:** Sistema europeu de classificação de conteúdo de jogos.
+  - **Como será atendida:** O jogo buscará a classificação **"PEGI 16"**. A representação da violência, embora em _pixel art_, juntamente com o uso de linguagem imprópria e a complexidade dos temas psicológicos, justifica esta classificação. O desenvolvimento seguirá as diretrizes da PEGI para garantir que o conteúdo se mantenha adequado para maiores de 16 anos.
+
+- **Lei de Direitos Autorais (Lei nº 9.610/98 - Brasil e equivalentes internacionais)**
+  - **Norma:** Legislação que protege a propriedade intelectual de obras criativas.
+  - **Como será atendida:** Todos os _assets_ (arte, música, sons) e códigos utilizados no projeto serão de autoria própria ou obtidos de fontes que permitam o uso comercial e/ou não comercial, como bibliotecas com licenças permissivas (Creative Commons, MIT). As referências a obras externas serão devidamente creditadas, como já iniciado na seção de referências do documento.
+
+- **LGPD (Lei Geral de Proteção de Dados - Lei nº 13.709/2018)**
+  - **Norma:** Legislação brasileira que regula o tratamento de dados pessoais.
+  - **Como será atendida:** O escopo atual do projeto não prevê a coleta de dados pessoais dos jogadores. O jogo será uma experiência offline. Caso futuras versões incluam funcionalidades online (como placares ou contas de usuário), serão implementadas políticas de privacidade claras, solicitando o consentimento do usuário e garantindo que apenas os dados estritamente necessários sejam coletados e armazenados de forma segura.
    
 ## 4. Próximos Passos
 
@@ -303,6 +375,7 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
 ## 6. Apêndices (Opcionais)
 
 Informações complementares, dados de suporte ou discussões detalhadas fora do corpo principal.
+
 ## 7. Avaliações de Professores
 
 Adicionar três páginas no final do RFC para que os Professores escolhidos possam fazer suas considerações e assinatura:
