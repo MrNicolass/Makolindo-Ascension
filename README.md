@@ -223,23 +223,124 @@ Para quantificar o "sucesso" do jogo quanto ao âmbito acadêmico e pessoal do d
 
 ## 3. Especificação Técnica
 
-Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnologias, segurança e aderência aos critérios obrigatórios da linha de projeto escolhida.
+Como já citado brevemente anteriormente, Makolindo Ascension será construído envolto de uma arquitetura de design visual _pixel art_ 16x16 (não limitado apenas a tal definição) ao estilo _roguelite_ e _dungeon crawler_. Nos tópicos a seguir, serão detalhadas as especificações do mesmo.
 
 ### 3.1 Requisitos de Software
-- **Requisitos Funcionais (RF)**: Liste de forma clara as funcionalidades que o sistema deverá oferecer.
-- **Requisitos Não-Funcionais (RNF)**: Inclua requisitos de desempenho, segurança, usabilidade, escalabilidade, disponibilidade, entre outros.
-- **Representação dos Requisitos**: Inclua um Diagrama de Casos de Uso (UML) ou outra representação visual que facilite o entendimento.
-- **Aderência aos Requisitos da Linha de Projeto**: Indique como cada requisito está alinhado aos itens “Obrigatório Atender” definidos para a linha de projeto (Web, Mobile, Jogos, IA ou IoT).
 
-### 3.2 Considerações de Design
-- **Visão Inicial da Arquitetura**: Apresente os principais componentes e suas interações.
-- **Padrões de Arquitetura**: Informe padrões adotados (ex.: [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [Microserviços](https://microservices.io/), [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), Arquitetura em Camadas).
-- **Modelos C4**: Utilize os quatro níveis ([C4 Model](https://c4model.com/)) quando aplicável.
-- **Mockups das Telas Principais**: Apresente protótipos visuais das telas mais relevantes, mostrando navegação, disposição de elementos e principais interações do usuário. Esses mockups podem ser feitos em ferramentas como Figma, Adobe XD ou similares, e devem refletir a identidade visual e usabilidade prevista para o produto.
-- **Decisões e Alternativas Consideradas**: Justifique escolhas de design, documentando alternativas avaliadas.
-- **Critérios de Escalabilidade, Resiliência e Segurança**: Descreva como a solução será projetada para suportar crescimento, lidar com falhas e manter segurança.
+| **Data** | **Versão** | **Descrição** | **Autor** |
+|----------|------------|---------------|-----------|
+| 01/12/2025 | 0.1 | Criação do Documento e primeiras definições | Nicolas G. Conte |
 
-### 3.3 Stack Tecnológica
+#### 3.1.1 Requisitos Funcionais (RF)
+
+- RF01 - O jogo deve permitir alterar opções de volume geral;
+- RF02 - O jogador deverá poder escolher quais _upgrades_ permanentes deseja comprar;
+- RF03 - O jogador deverá poder escolher comprar os itens da loja ou não;
+- RF04 - O jogador deverá poder escolher trocar de arma ou não;
+- RF05 - O jogo deve permitir realizar _upgrades_ nas habilidades;
+- RF06 - O jogo deve exibir visualmente o dano causado aos inimigos;
+- RF07 - Dados do jogo deverão ser salvos de forma criptografada;
+- RF08 - O sistema deve gerar as salas do jogo de forma procedural a cada nova partida;
+- RF09 - O jogador deve poder movimentar o personagem nas direções cardeais e diagonais;
+- RF10 - O jogador deve poder realizar ataques corpo a corpo e à distância, dependendo da arma equipada;
+- RF11 - Inimigos devem perseguir e atacar o jogador quando ele entrar na mesma sala;
+- RF12 - Ao ter a vida zerada, a partida do jogador deve terminar, e ele deve retornar à área inicial do jogo para iniciar uma nova partida;
+- RF13 - O jogo deve apresentar uma interface (HUD) com informações vitais e monetárias do jogador, como vida atual;
+- RF14 - O jogador deve poder pausar e despausar o jogo a qualquer momento durante a partida.
+
+#### 3.1.2 Requisitos Não-Funcionais (RNF)
+
+- RNF01 - O jogo será desenvolvido para computadores _desktop_ e _notebooks_ com sistema operacional Windows 11;
+- RNF02 - O jogo não dependerá de internet para funcionar;
+- RNF03 - A alteração dos dados salvos não deve afetar o funcionamento do jogo;
+- RNF04 - O jogo deve manter uma taxa de quadros por segundo (FPS) estável em 60 FPS no hardware alvo;
+- RNF05 - A direção de arte do jogo deve seguir um estilo _pixel art_ consistente;
+- RNF06 - O tempo de resposta entre o comando do jogador (teclado/mouse) e a ação na tela deve ser mínimo, garantindo a fluidez do combate;
+- RNF07 - O jogo deve ser distribuído como um executável único ou por meio de um instalador simples;
+- RNF08 - O consumo de recursos de hardware (CPU, RAM) deve ser otimizado para não sobrecarregar sistemas que atendam aos requisitos mínimos.
+- RNF09 - O jogador deve poder se mover utilizando as teclas W, A, S e D;
+- RNF10 - O jogador deve poder atacar os inimigos clicando com o botão esquerdo do mouse ou tecla do teclado.
+
+### 3.2 Representação dos Requisitos
+
+![Diagrama completo do jogo](</Diagrama-Jogo-Completo.png>)
+
+
+### 3.3. Aderência aos Requisitos da Linha de Projeto
+
+*   **Jogo jogável do início ao fim:** O projeto define um loop de _gameplay_ completo e funcional. O jogador inicia uma partida, explora salas geradas proceduralmente (RF08), combate inimigos (RF11) e, ao ser derrotado (RF12), retorna à área inicial para adquirir _upgrades_ permanentes (RF02) e começar uma nova tentativa. A seção 2.6 (Limitações) delimita o escopo para garantir que este ciclo seja implementável, constituindo uma "fase ou loop completo funcional";
+
+- **Build funcional distribuída:** O **GameMaker Studio** permite a exportação do projeto como um executável _standalone_ para Windows (RNF01, RNF07). Além disso, a métrica de sucesso (seção 2.8) prevê a publicação do jogo no site `itch.io`, o que pressupõe a existência de uma _build_ funcional e distribuível;
+
+- **Código-fonte acessível:** A utilização do **GitHub** para controle de versão, conforme descrito na seção 3.9, garante que o código-fonte estará organizado e acessível em um repositório, seja ele público ou privado com acesso concedido aos avaliadores;
+
+- **Documentação com foco em game design:** O próprio documento `README.md` serve como a documentação central. Ele detalha a visão geral (seção 2), o objetivo (seção 2.1), o loop de _gameplay_ (implícito nas mecânicas descritas), as mecânicas implementadas (seções 2.6 e 3.1.1) e as tecnologias utilizadas (seção 3.9);
+
+- **Apresentação de elementos mínimos de jogabilidade:** Os requisitos funcionais definem claramente os elementos mínimos:
+    - **Personagem controlável:** RF09 (movimentação) e RF10 (ataque);
+    - **Regras:** RF11 (comportamento do inimigo) e RF12 (condição de derrota);
+    - **Objetivo:** Sobreviver o máximo possível para progredir e fortalecer o personagem entre as partidas;
+    - **Vitória/Derrota:** A condição de derrota está explícita em RF12 (vida zerada);
+
+- **Interface minimamente navegável:** O requisito RF13 (apresentação de HUD com informações vitais) e RF14 (pausar o jogo) garantem a presença de uma interface funcional. A menção a menus de _upgrade_ (RF02) e opções (RF01) também cobre a navegabilidade mínima;
+
+- **Arte e som placeholders:** A escolha de ferramentas como **Piskel** e a definição de um estilo _pixel art_ (RNF05) indicam a preocupação com a identidade visual, mesmo que os _assets_ iniciais sejam temporários (_placeholders_) para representar a intenção do design.
+
+### 3.4 Considerações de Design
+- **Visão Inicial da Arquitetura**: A arquitetura do jogo será centrada em um modelo de objetos gerenciado por eventos, nativo do GameMaker. Os principais componentes serão:
+    - **Objeto Gerenciador Global (`obj_game_manager`):** Um objeto persistente que controlará o estado geral do jogo, como o progresso do jogador entre as partidas (_meta-progressão_), salvamento/carregamento de dados (RF07) e transições entre a área inicial e as masmorras;
+    - **Objeto Gerenciador de Nível (`obj_level_manager`):** Responsável pela geração procedural das salas (RF08), posicionamento de inimigos e itens, e controle do fluxo dentro de uma masmorra;
+    - **Objeto do Jogador (`obj_player`):** Entidade central que encapsula a lógica de movimentação (RF09), combate (RF10), atributos (vida, dano) e interações com o mundo. Seu comportamento será gerenciado por uma máquina de estados finitos (ex: `idle`, `walk`, `attack`, `dead`).
+    - **Objetos de Inimigos (`obj_enemy_parent`):** Um objeto pai definirá o comportamento base dos inimigos (perseguição, ataque - RF11), e objetos filhos herdarão essas características para criar variações (comum, _tank_, _ranged_);
+    - **Objeto de Interface (`obj_ui_manager`):** Responsável por desenhar todos os elementos da HUD na tela (RF13), como vida, moedas e informações de itens, além de gerenciar o menu de pausa (RF14).
+
+A interação entre esses componentes será, em sua maioria, orientada a eventos de colisão e eventos de passo (_step events_), que atualizam o estado do jogo a cada quadro.
+
+### 3.5 Padrões de Arquitetura
+
+- **Padrões de Arquitetura**: A arquitetura do GameMaker não se encaixa estritamente em padrões de software tradicionais como MVC ou MVVM. Em vez disso, o projeto adotará os seguintes padrões comuns no desenvolvimento de jogos:
+    - **Arquitetura Orientada a Eventos:** O núcleo do GameMaker. A lógica do jogo é acionada por eventos como `Create` (criação de um objeto), `Step` (a cada quadro), `Draw` (desenho na tela) e `Collision`;
+    - **Máquina de Estados Finitos (FSM):** Será amplamente utilizada para gerenciar a lógica do jogador e dos inimigos. Cada entidade terá estados distintos (ex: patrulhando, perseguindo, atacando, recuando), o que organiza o código, facilita a depuração e permite a criação de comportamentos complexos de IA;
+    - **Padrão Singleton (Gerenciadores):** Objetos como `obj_game_manager` e `obj_level_manager` atuarão como Singletons. Existirá apenas uma instância de cada um por vez, fornecendo um ponto de acesso global para gerenciar sistemas críticos do jogo;
+    - **Herança de Objetos:** Para os inimigos, será utilizado o sistema de herança do GameMaker. Um objeto `obj_enemy_parent` conterá a lógica comum a todos os inimigos, e os tipos específicos (`obj_enemy_melee`, `obj_enemy_ranged`) herdarão desse pai, sobrescrevendo ou adicionando comportamentos específicos;
+- **Modelos C4**: Devido à natureza monolítica de um executável de jogo, a aplicação do Modelo C4 é limitada. O diagrama de componentes lógicos (nível 2) pode ser representado pela visão de arquitetura descrita na seção 3.4, onde cada "objeto gerenciador" é um componente lógico principal dentro do "container" do jogo.
+
+### 3.6 Mockups Principais
+
+<p align="center">
+    <img src="./Makolindo-perfil.png" alt="Mockup da tela inicial" width="154"/>
+    <img src="./Makolindo-lado.png" alt="Mockup da gameplay" width="150"/>
+    <p align="center"><em>Figura 3-4. Makolindo - Personagem principal.</em></p>
+</p>
+
+
+<p align="center">
+    <img src="./Exemplo-menu.png" alt="Mockup exemplo da tela principal">
+    <p align="center"><em>Figura 5. Mockup da tela principal do jogo.</em></p>
+</p>
+
+### 3.7 Decisões e Alternativas Consideradas
+- **Decisões e Alternativas Consideradas**:
+    - **Motor de Jogo:**
+        - **Escolha:** GameMaker Studio;
+        - **Alternativas:** Godot, Unity;
+        - **Justificativa:** A simplicidade da linguagem GML e o fluxo de trabalho rápido e orientado a 2D do GameMaker são ideais para um projeto de escopo limitado e focado em mecânicas _roguelite_. Godot seria uma alternativa forte e gratuita, mas a familiaridade prévia com o GameMaker acelera o desenvolvimento. Unity, embora poderoso, tem uma curva de aprendizado mais acentuada e é mais complexo do que o necessário para este projeto;
+    - **Geração Procedural:**
+        - **Escolha:** Geração baseada em salas pré-definidas conectadas aleatoriamente;
+        - **Alternativas:** Algoritmos mais complexos como _Drunkard's Walk_ ou _Cellular Automata_;
+        - **Justificativa:** A abordagem de salas pré-definidas permite um maior controle sobre o design de cada sala, garantindo que os desafios de combate e exploração sejam interessantes. A aleatoriedade virá da ordem e do layout em que essas salas são conectadas. Algoritmos mais complexos, embora gerem layouts mais orgânicos, exigiriam mais tempo de desenvolvimento e depuração para garantir a jogabilidade;
+    - **Salvamento de Dados:**
+        - **Escolha:** Arquivo local com ofuscação (JSON codificado em Base64);
+        - **Alternativas:** Texto plano (`.ini`), arquivo binário;
+        - **Justificativa:** Salvar em texto plano é inseguro e permite que o jogador manipule facilmente o progresso. Um arquivo binário puro é mais seguro, mas mais difícil de depurar. A abordagem com JSON codificado oferece um bom equilíbrio: é humanamente ilegível para o jogador médio (dificultando a trapaça), mas pode ser facilmente decodificado pelo desenvolvedor para fins de teste e depuração.
+
+### 3.8 Critérios de Escalabilidade, Resiliência e Segurança
+- **Critérios de Escalabilidade, Resiliência e Segurança**:
+    - **Escalabilidade:** A arquitetura baseada em objetos e herança permite a fácil adição de novos conteúdos. Novos inimigos, itens e armas podem ser criados como novos objetos que herdam de uma base funcional, minimizando a refatoração de código. A geração procedural baseada em salas também é escalável, pois basta adicionar novos _templates_ de salas ao conjunto de possibilidades para aumentar a variedade do jogo;
+    - **Resiliência:** Por ser um jogo _offline_, a principal preocupação de resiliência é contra _crashes_ e corrupção de dados de salvamento. O código incluirá verificações para evitar erros comuns (ex: acessar instâncias que não existem). O sistema de salvamento incluirá um _checksum_ ou uma soma de verificação para validar a integridade do arquivo ao ser carregado. Se o arquivo estiver corrompido, o jogo informará o usuário e carregará um estado padrão, em vez de travar;
+    - **Segurança:** O foco principal é mitigar a trapaça (_cheating_) local. Conforme descrito na seção 3.10, os dados de salvamento serão ofuscados para dificultar a edição manual. Para a distribuição final, a compilação via YoYo Compiler (YYC) será utilizada para converter o código em C++, tornando a engenharia reversa e a edição de memória em tempo de execução significativamente mais difíceis do que com a máquina virtual padrão.
+
+### 3.9 Stack Tecnológica
 
 <table align="center">
     <tr>
@@ -294,7 +395,7 @@ Descrição detalhada da proposta, contemplando requisitos, arquitetura, tecnolo
     </tr>
 </table>
 
-### 3.4 Considerações de Segurança
+### 3.10 Considerações de Segurança
 
 Dado que o projeto é um jogo _single-player_ e _offline_, os riscos de segurança são diferentes dos de uma aplicação _web_ ou _mobile_ conectada. O foco se volta para a proteção da integridade do jogo e da experiência do usuário contra manipulações locais.
 
@@ -309,7 +410,7 @@ Dado que o projeto é um jogo _single-player_ e _offline_, os riscos de seguran�
 - **Normas e Boas Práticas Seguidas**
   - **LGPD (Lei Geral de Proteção de Dados):** Conforme detalhado na seção 3.5, o jogo em seu escopo atual não coleta dados pessoais. Qualquer funcionalidade futura que envolva dados de usuário seguirá estritamente os princípios da LGPD, com políticas de privacidade claras e consentimento explícito.
 
-### 3.5 Conformidade e Normas Aplicáveis
+### 3.11 Conformidade e Normas Aplicáveis
 
 O projeto será desenvolvido em conformidade com as seguintes regulamentações e normas, garantindo sua adequação legal e ética para distribuição:
 
