@@ -435,9 +435,34 @@ O projeto será desenvolvido em conformidade com as seguintes regulamentações 
   - **Como será atendida:** O escopo atual do projeto não prevê a coleta de dados pessoais dos jogadores. O jogo será uma experiência offline. Caso futuras versões incluam funcionalidades online (como placares ou contas de usuário), serão implementadas políticas de privacidade claras, solicitando o consentimento do usuário e garantindo que apenas os dados estritamente necessários sejam coletados e armazenados de forma segura.
    
 ## 4. Próximos Passos
+A seguir, são detalhados os próximos passos para a execução do projeto, abrangendo a organização, documentação e o desenvolvimento inicial do código.
 
- - Descrição dos passos seguintes após a conclusão do documento, com uma visão geral do cronograma para Portfólio I e II.
- - Definição de Marcos: Estabelecer datas para entregas intermediárias e checkpoints.
+### 4.1 Organização e Planejamento
+- **Criação do Backlog:** Todas as funcionalidades, requisitos e limitações descritos neste documento serão transferidos para o **ClickUp**, formando o _backlog_ inicial do projeto;
+- **Definição de Sprints:** O trabalho será organizado em _Sprints_ (ciclos de desenvolvimento) com duração de duas semanas cada. A primeira _Sprint_ focará na criação de um protótipo funcional com as mecânicas centrais;
+- **Configuração do Repositório:** O repositório no **GitHub** será inicializado, estabelecendo a estrutura de _branches_ (`main` para versões estáveis, `develop` para integração contínua) e integrando-o ao GameMaker Studio.
+
+### 4.2 Documentação
+- **Game Design Document (GDD):** Será elaborado um GDD detalhado, aprofundando o design de níveis, a narrativa, o balanceamento de itens e inimigos, e as mecânicas de jogo;
+- **Documentação Técnica:** O código-fonte será documentado internamente, explicando a lógica de _scripts_ e objetos complexos para facilitar a manutenção e futuras expansões.
+
+### 4.3 Desenvolvimento do Código (MVP)
+- **Protótipo do Jogador:** Implementação do controle de movimento (RF09), sistema de vida e ataque básico (RF10);
+- **Geração Procedural Inicial:** Desenvolvimento do algoritmo para gerar um layout de salas conectadas (RF08);
+- **Inimigo Básico:** Criação de um inimigo com IA simples de perseguição e ataque (RF11);
+- **Loop de Gameplay:** Estabelecimento do ciclo de jogo principal: entrar em uma masmorra, combater inimigos, ser derrotado (RF12) e retornar à área inicial.
+
+<!-- ### 4.4 Cronograma e Marcos (Portfólio I e II)
+O desenvolvimento será dividido em duas grandes fases, alinhadas com as entregas acadêmicas.
+
+| Marco | Previsão de Entrega | Descrição |
+|---|---|---|
+| **Portfólio I** | **Final do 1º Semestre** | Foco na construção do núcleo do jogo (MVP). |
+| M1: Protótipo Jogável | Semana 6 | Personagem se move, ataca e pode ser derrotado por um tipo de inimigo em uma sala estática. |
+| M2: Loop de Gameplay | Semana 12 | Geração procedural de salas implementada. O jogador pode navegar entre salas e o ciclo de morte e reinício está funcional. |
+| **Portfólio II** | **Final do 2º Semestre** | Foco na expansão de conteúdo e polimento. |
+| M3: Conteúdo Expandido | Semana 18 | Adição de mais inimigos, itens, armas e o sistema de _upgrades_ permanentes (RF02). |
+| M4: Versão Beta | Semana 24 | Jogo completo do início ao fim (dentro do escopo limitado), com arte final, sons e balanceamento inicial. Pronto para testes. | -->
 
 ## 5. Referências
 
