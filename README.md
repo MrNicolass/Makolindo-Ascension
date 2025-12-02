@@ -408,7 +408,7 @@ Dado que o projeto é um jogo _single-player_ e _offline_, os riscos de seguran�
   - **Compilação Nativa (YYC):** Para as versões de lançamento no Steam e Itch.io, o jogo será compilado usando o YoYo Compiler (YYC) do GameMaker em vez da máquina virtual padrão. O YYC converte o código GML para C++, resultando em um executável nativo que é significativamente mais difícil de descompilar e analisar do que o código interpretado;
   - **Validação de Integridade:** Para futuras funcionalidades _online_ (como placares de líderes), todas as pontuações enviadas ao servidor incluirão um _hash_ de validação gerado a partir de dados da partida, para mitigar o envio de pontuações falsas;
 - **Normas e Boas Práticas Seguidas**
-  - **LGPD (Lei Geral de Proteção de Dados):** Conforme detalhado na seção 3.5, o jogo em seu escopo atual não coleta dados pessoais. Qualquer funcionalidade futura que envolva dados de usuário seguirá estritamente os princípios da LGPD, com políticas de privacidade claras e consentimento explícito.
+  - **LGPD (Lei Geral de Proteção de Dados):** Conforme detalhado na seção 3.11, o jogo em seu escopo atual não coleta dados pessoais. Qualquer funcionalidade futura que envolva dados de usuário seguirá estritamente os princípios da LGPD, com políticas de privacidade claras e consentimento explícito.
 
 ### 3.11 Conformidade e Normas Aplicáveis
 
