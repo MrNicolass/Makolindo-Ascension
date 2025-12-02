@@ -364,7 +364,7 @@ A interação entre esses componentes será, em sua maioria, orientada a eventos
         <td>Ferramentas de Desenvolvimento e Gestão</td>
         <td>Piskel</td>
         <td>
-            Para casos onde o GameMaker não supra a necessidade da criação das <i>sprits</i> (artes do jogo) — como em casos mais complexos —, o Piskel será utilizado para tal, pois é uma ferramenta gratuita, simples e mais completa que o GameMaker Studio quanto a criação de arte.
+            Para casos onde o GameMaker não supra a necessidade da criação das <i>sprites</i> (artes do jogo) — como em casos mais complexos —, o Piskel será utilizado para tal, pois é uma ferramenta gratuita, simples e mais completa que o GameMaker Studio quanto a criação de arte.
         </td>
     </tr>
     <tr>
